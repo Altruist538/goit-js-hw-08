@@ -15,23 +15,8 @@ player.on('timeupdate', saveCurrentTime);
 // Функция для восстановления времени воспроизведения при загрузке страницы
 function restorePlaybackTime() {
   const currentTime = localStorage.getItem(PLAYER_CURRENT_TIME);
-  if (currentTime) {
-    player
-      .setCurrentTime(parseFloat(currentTime))
-      .then(() => {
-        console.log('Playback time restored.');
-      })
-      .catch(function (error) {
-        switch (error.name) {
-          case 'RangeError':
-            // the time was less than 0 or greater than the video’s duration
-            break;
-          default:
-            // some other error occurred
-            break;
-        }
-      });
-  }
+
+  player.setCurrentTime(currentTime || 0);
 }
 
 restorePlaybackTime();
