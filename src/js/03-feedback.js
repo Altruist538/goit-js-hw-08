@@ -1,10 +1,8 @@
 import throttle from 'lodash.throttle';
 const FEEDBACK_FORM_STATE = 'feedback-form-state';
 const feedbackFormEl = document.querySelector('.feedback-form');
-const feedbackFormEmail = feedbackFormEl.querySelector('input[name="email"]');
-const feedbackFormMessage = feedbackFormEl.querySelector(
-  'textarea[name="message"]'
-);
+const feedbackFormEmail = feedbackFormEl.querySelector('input');
+const feedbackFormMessage = feedbackFormEl.querySelector('textarea');
 let output = JSON.parse(localStorage.getItem(FEEDBACK_FORM_STATE)) || {
   email: '',
   message: '',

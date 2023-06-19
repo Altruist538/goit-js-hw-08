@@ -1,9 +1,8 @@
-// Add imports above this line
 import { galleryItems } from './gallery-items';
-// Change code below this line
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from '/node_modules/simplelightbox';
-
+// Add imports above this line
+// Change code below this line
 const galleryEl = document.querySelector('.gallery');
 const galleryAdd = galleryItems
   .map(
