@@ -21,6 +21,6 @@ function getFeedbackForm(evt) {
   evt.preventDefault();
   console.log(output);
   evt.target.reset();
-  output = {};
+  output = { email: '', message: '' };
   localStorage.removeItem(FEEDBACK_FORM_STATE);
 }
