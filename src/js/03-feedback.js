@@ -21,5 +21,6 @@ function getFeedbackForm(evt) {
   evt.preventDefault();
   console.log(output);
   evt.target.reset();
+  output = {};
   localStorage.removeItem(FEEDBACK_FORM_STATE);
 }
